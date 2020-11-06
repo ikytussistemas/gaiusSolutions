@@ -1,0 +1,19 @@
+@mixin btn-init($color) {
+    background: $color;
+    color: white;
+    &:hover {
+      background: darken($color, 5);
+    }
+}
+
+@mixin text-effect ($val) {
+  @if $val == danger {
+    color: red;
+  }
+  @else if $val == alert {
+    color: orange;
+  }
+  @else {
+    color: blue;
+  }
+}

@@ -1,0 +1,84 @@
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.title, .tag {
+  color: #fff;
+  font-weight: bolder;
+  align-self: center;
+}
+
+.title{
+  font-size: 25px;
+}
+
+.tag {
+  font-size: 14px;
+}
+
+.row {
+  margin: 0;
+  justify-content: center;
+}
+
+.products, .select, .expected {
+  background-color: #34495e;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.products {
+  width:25%;
+}
+.select {
+  width: 40%;
+}
+.expected {
+  width: 25%;
+  height: 220px;
+  align-self: center;
+  align-content: center;
+}
+
+.card {
+  background-color: #2980b9;
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-style: inset;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.iten {
+  justify-content: space-between;
+}
+
+.iten-txt, .iten-btn, .iten-qty {
+  margin-right: 5px;
+  font-weight: bolder;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.iten-qty {
+  margin-left: 5px;
+}
+
+.iten-btn {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 0;
+  margin-left: 5px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+

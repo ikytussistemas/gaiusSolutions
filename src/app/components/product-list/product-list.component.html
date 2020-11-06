@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="title">Bem-vindo! Selecione seus produtos</div>
+  <div class="row">
+    <div class="products cols-6">
+      <div class="tag text-center">Products</div>
+      <div *ngFor="let product of products">
+        <div class="card">
+          <span>{{product.name}}</span>
+          <span>{{(product.price / 100) | currency:'CAD':'symbol-narrow'}}</span>
+          <button class="btn btn-success" (click)="addIten(product)">Add in Basket</button>
+        </div>
+      </div>
+    </div>
+    <div class="select cols-3">
+      <div class="tag text-center">Basket Contents</div>
+      <div *ngFor="let iten of selectItens">
+        <div class="card">
+          <div class="iten">
+            <span class="iten-txt">{{iten.product.name}}</span>
+            <button class="btn btn-warning iten-btn" title="minus" (click)=minusIten(iten)>
+              <i class="fas fa-minus"></i>
+            </button>
+            <span class="iten-qty">{{iten.quantity}}</span>
+            <button class="btn btn-info iten-btn" title="add" (click)=addIten(iten.product)>
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+
+          <span>Total: {{(iten.vrFinal / 100) | currency:'CAD':'symbol-narrow'}}</span>
+          <button class="btn btn-danger" (click)="removeIten(iten.product)">remove</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="expected cols-3">
+      <div class="tag text-center">Expected Totals</div>
+
+        <div class="card">
+          <span><b>Total:</b>{{totalItens | currency:'CAD':'symbol-narrow'}}</span>
+          <hr/>
+          <span><b>Total Promos:</b>{{totalPromos | currency:'CAD':'symbol-narrow'}}</span>
+          <hr/>
+          <span><b>Total Payable:</b>{{totalPayable | currency:'CAD':'symbol-narrow'}}</span>
+          <hr/>
+        </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,141 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    background-color: rgba(228, 241, 254, 1);
+    overflow: auto;
+}
+
+a:link {
+ text-decoration:none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.border-l,
+.toolbar {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.border-r,
+.toolbar {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.toolbar {
+    border: 2px solid darkgrey;
+    min-height: 34px;
+}
+
+.toolbar-item {
+    max-height: 30px !important;
+    padding: 2px;
+    font-size: 12px;
+    color: black;
+}
+.toolbar-btn {
+    max-height: 30px !important;
+    margin: 0;
+    padding: inherit;
+}
+
+.page {
+  margin: 44px auto;
+  padding: 5px;
+  max-width: 1000px;
+  border-radius: 5px;
+  background: transparent;
+  box-sizing: content-box;
+  position: relative;
+  transition: all 0.5s;
+  overflow: auto;
+}
+.page-top,
+.page-search {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  background: $color-secundary;
+}
+
+.componenteform {
+  padding: 5px;
+}
+
+/** Layout Cards**/
+.card,
+.card-radius,
+.card-home,
+.card-transparente,
+.card-login {
+  background-color: whitesmoke;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-style: inset;
+  border-radius: 5px;
+  box-shadow: $color-shadow;
+}
+
+.card-radius {
+  border-radius: 10px;
+}
+
+.card-home {
+  margin-top: 150px;
+}
+
+.card-flat {
+  background-color: #ffffff;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-style: outset;
+  border-radius: 5px;
+  box-shadow: $color-box-shadow-transparent;
+}
+
+.card-transparente,
+.card-login {
+  background: $color-transparent;
+}
+
+.card-dash {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-dash:hover {
+  box-shadow: $color-shadow;
+  background-color: lightblue;
+}
+
+.sombra,
+.sombra-btn,
+.tbl-info,
+.toolbar-btn {
+  box-shadow: $color-shadow;
+}
+
+.sombra-btn:hover {
+  box-shadow: $color-shadow;
+}
+
+.modal-dialog.modal-max {
+  max-width: 95%;
+  margin: 1.75rem auto;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog.modal-max {
+    max-width: 95%;
+    margin: 1.75rem auto;
+  }
+}

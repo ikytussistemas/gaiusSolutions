@@ -1,0 +1,90 @@
+.ik-topo {
+  width: 100%;
+  height: 44px;
+  background-color: $color-primary;
+  border: $color-primary;
+  box-shadow: $color-shadow;
+  z-index: 1001;
+}
+
+.navbar {
+  padding: 4px 1rem;
+}
+
+.navbar-brand {
+  padding: 2px !important;
+  background-color: $color-primary;
+  > img {
+    background: transparent;
+    max-height: 30px;
+    margin-top: -5px;
+  }
+}
+
+.menu-icon {
+  color: $color-primary-logo;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: top;
+  cursor:pointer;
+}
+
+.menu-profile {
+  width: 300px;
+  background-color: $color-primary;
+  margin: 7px;
+  padding: 5px;
+  border: $color-border;
+}
+
+.menu-profile-text {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 5px;
+  vertical-align: top;
+  text-align: center;
+  &:hover {
+    color: #5dade2;
+  }
+}
+
+.menu-profile-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.menu-profile-img--logo {
+  height: 32px;
+  border-radius: 50%;
+}
+
+.logo {
+  padding: 5px;
+  border-radius: 8px;
+  transition: 0.8s;
+  &:hover {
+    background: rgb(45, 45, 46);
+    box-shadow: $color-shadow;
+  }
+}
+
+.logo-text {
+	color: $color-primary-logo;
+	font-size: 18px;
+	font-weight: bolder;
+	font-family: 'Roboto', sans-serif;
+	&::before {
+		content: "Designer";
+	}
+}
+
+.logo-text-sec {
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: 'Oleo Script', cursive;
+  &::before{
+    content: " Fitness";
+  }
+}

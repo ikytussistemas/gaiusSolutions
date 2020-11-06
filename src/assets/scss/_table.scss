@@ -1,0 +1,60 @@
+/***TABELA RESPONSIVA -->***/
+.ik-table-col-codigo,
+.ik-table-col-icons {
+    width: 60px;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+th,
+tfoot,
+.faixa {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #07889b;
+  }
+
+@media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    /* esconder cabeçalho*/
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+        text-align: justify;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        text-align: start;
+        position: relative;
+        padding-left: 10px;
+    }
+    td:before {
+        font-weight: bold;
+        padding-right: 10px;
+        font-size: 12px;
+        content: " " attr(data-label) " ";
+    }
+}
+
+/***<-- TABELA RESPONSIVA***/
