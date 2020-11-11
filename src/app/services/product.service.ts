@@ -10,26 +10,17 @@ import { Product } from '../shared/models/product.model';
 })
 export class ProductService {
 
-  urlResouce = 'http://localhost:8081/products';
-  urlProducts = '../../assets/db/full-products.json';
-  urlOnlyProducts = '../../assets/db/products.json';
-
-  private corsHeaders: any;
+  urlResouce = '/products';
 
   constructor(
     public http: HttpClient,
   ) { }
 
   findOnlyProducts(): Observable<any> {
-    return this.http.get(this.urlOnlyProducts, { responseType: 'json' });
-  }
-
-  findAll(): Observable<any> {
-    return this.http.get(this.urlProducts, { responseType: 'json' });
+    return this.http.get(this.urlResouce, { responseType: 'json' });
   }
 
   findById(id: string): Observable<Product> {
-    return this.http.get<Product>(`${this.urlResouce}/${id}`, { reportProgress: true });
+    return this.http.get<Product>(`${this.urlResouce}/${id}`, { responseType: 'json' });
   }
-
 }

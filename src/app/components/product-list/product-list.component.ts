@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheckoutService } from 'src/app/services/checkout.service';
 
 import { ProductService } from 'src/app/services/product.service';
 import { Iten } from 'src/app/shared/models/iten.model';
@@ -18,20 +19,21 @@ export class ProductListComponent implements OnInit {
   totalPayable = 0;
 
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private checkoutService: CheckoutService,
   ) { }
 
   ngOnInit(): void {
     this.getProducts();
   }
 
-  getProducts() {
-    this.productService.findAll().subscribe(response => {
+  getProducts(): void {
+    this.productService.findOnlyProducts().subscribe((response: Product[]) => {
       this.products = response;
     });
   }
 
-  addIten(product) {
+  addIten(product): void {
     if (this.checkIten(product)){
       const findIten = this.checkIten(product);
       findIten.quantity ++;
@@ -42,14 +44,13 @@ export class ProductListComponent implements OnInit {
       const findIten = this.checkIten(iten.product);
       this.refreshIten(findIten);
     }
-    this.checkout();
   }
 
-  removeIten(product: any) {
+  removeIten(product: any): void {
     this.selectItens.splice(this.selectItens.indexOf(this.checkIten(product)), 1);
     this.checkout();
   }
-  minusIten(iten: Iten) {
+  minusIten(iten: Iten): void {
     const itenFind = this.checkIten(iten.product);
     itenFind.quantity --;
     this.refreshIten(itenFind);
@@ -64,12 +65,15 @@ export class ProductListComponent implements OnInit {
     return itenFound;
   }
 
-  refreshIten(iten: Iten) {
+  refreshIten(iten: Iten): void {
     iten.getVrTotal();
-    iten.aplayPromotions();
+    this.checkoutService.aplayPromotions(iten);
+    setTimeout(() => {
+      this.checkout();
+    }, 1000);
   }
 
-  checkout() {
+  checkout(): void {
     this.totalItens = 0;
     this.totalPromos = 0;
     this.totalPayable = 0;
