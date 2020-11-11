@@ -3,7 +3,8 @@
 ## Instructions
 1. Clone this repository
 2. In the project directory run `npm install`
-3. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+3. Start wiremock API
+4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Follow-up Questions
 
