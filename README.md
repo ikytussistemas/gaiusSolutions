@@ -6,6 +6,10 @@
 3. Start wiremock API
 4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
+## To test
+1. Run `ng test`
+2. Navigate to `http://localhost:9876/`
+
 ## Follow-up Questions
 
 ## How long did you spend on the test? 
